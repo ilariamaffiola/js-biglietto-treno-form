@@ -10,8 +10,8 @@ const ageField = document.getElementById('age-field');
 const nome = document.getElementById('nome');
 const surname = document.getElementById('surname');
 const typeOfTicket = document.getElementById('type-ticket');
-const costo = document.getElementById('balance');
-
+let costo = document.getElementById('balance');
+console.log(costo);
 
 //avvio l'evento click di buttonGenerate
 buttonGenerate.addEventListener('click', function(event){
@@ -24,14 +24,18 @@ buttonGenerate.addEventListener('click', function(event){
     prezzoBase= kilometerField.value * 0.21;
     sconto = 0;
     //calcolo lo sconto
-    if(ageField.value === '0-17'){
+    if(ageField.value.includes(0)){
         sconto = prezzoBase * 0.2;
     }
-    else if (ageField.value === '>65'){
+    else if (ageField.value.includes(65)){
         sconto = prezzoBase * 0.4;
     }
+    else{
+        sconto=0;
+    }
     //calcolo prezzo finale
-    costo = prezzoBase - sconto;
-    costo = costo.toFixed(2);
-    costo.innerHTML;
+    let costoValue = prezzoBase - sconto;
+    costoValue = costoValue.toFixed(2);
+    console.log(costoValue);
+    costo.innerText = `€ ${costoValue}`;
 })

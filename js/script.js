@@ -24,14 +24,18 @@ buttonGenerate.addEventListener('click', function(event){
     prezzoBase= kilometerField.value * 0.21;
     sconto = 0;
     //calcolo lo sconto
-    if(ageField.value.includes(0)){
+    //debugger; modo per capire i problemi
+    if(ageField.value === "minor"){
         sconto = prezzoBase * 0.2;
+        typeOfTicket.innerText = "Biglietto Ridotto";
     }
-    else if (ageField.value.includes(65)){
+    else if (ageField.value === "over-65"){
         sconto = prezzoBase * 0.4;
+        typeOfTicket.innerText = "Biglietto Ridotto";
     }
     else{
         sconto=0;
+        typeOfTicket.innerText = "Biglietto Standard";
     }
     //calcolo prezzo finale
     let costoValue = prezzoBase - sconto;

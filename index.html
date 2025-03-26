@@ -10,14 +10,18 @@
 <body>
     <main>
         <div class="container">
-            <div class="row justify-content-center g-3">
-                    <div class="col-4">
+            <form action="">
+                <div class="row justify-content-center g-3">
+                    <div class="col-3">
                         <input type="text" placeholder="Inserisci nome" id="nome-field" class="form-control" required> 
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
+                        <input type="text" placeholder="Inserisci cognome" id="surname-field" class="form-control" required> 
+                    </div>
+                    <div class="col-3">
                         <input type="text" placeholder="Km da percorrere" id="kilometer-field" class="form-control" required>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <select name="" id="age-field" class="form-select">
                             <option value="">Età del passeggero</option>
                             <option value="minor">0-17</option>
@@ -31,7 +35,8 @@
                     <div class="col-2">
                         <button id="button-delete" class="btn btn-danger">Annulla</button>
                     </div>
-            </div>
+                </div>
+            </form>
         </div>
     </main>
     <script src="./js/script.js"></script>

@@ -43,3 +43,7 @@ buttonGenerate.addEventListener('click', function(event){
     console.log(costoValue);
     costo.innerText = `€ ${costoValue}`;
 })
+
+buttonDelete.addEventListener('click', function(){
+    location.reload();
+})

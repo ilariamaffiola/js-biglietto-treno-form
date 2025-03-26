@@ -12,3 +12,12 @@ const surname = document.getElementById('surname');
 const typeOfTicket = document.getElementById('type-ticket');
 const costo = document.getElementById('balance');
 
+
+//avvio l'evento click di buttonGenerate
+buttonGenerate.addEventListener('click', function(event){
+    //event è l'evento che si è verificato, in questo caso specifico il click. preventDefault è un metodo che previene il comportamento di default della form
+    event.preventDefault();
+    nome.innerHTML = nameField.value.trim();
+    surname.innerHTML = surnameField.value.trim();
+    
+})

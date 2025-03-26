@@ -19,5 +19,19 @@ buttonGenerate.addEventListener('click', function(event){
     event.preventDefault();
     nome.innerHTML = nameField.value.trim();
     surname.innerHTML = surnameField.value.trim();
-    
+    let prezzoBase;
+    let sconto;
+    prezzoBase= kilometerField.value * 0.21;
+    sconto = 0;
+    //calcolo lo sconto
+    if(ageField.value === '0-17'){
+        sconto = prezzoBase * 0.2;
+    }
+    else if (ageField.value === '>65'){
+        sconto = prezzoBase * 0.4;
+    }
+    //calcolo prezzo finale
+    costo = prezzoBase - sconto;
+    costo = costo.toFixed(2);
+    costo.innerHTML;
 })
